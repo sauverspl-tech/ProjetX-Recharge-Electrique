@@ -9,7 +9,7 @@ Tous ces fichiers sont propres au projet recharge ; aucune dépendance au dépô
 | points_recharge.csv.gz | Extraction point par point après dédoublonnage et exclusion des codes explicitement étrangers ; unités, identifiants et caractéristiques conservés. |
 | qualite.json | Effectifs de contrôle, restrictions d’accès, ancienneté déclarée et rattachement départemental disponible. |
 | source_irve.json | Source du fichier brut, URL résolue, date de récupération, taille et empreinte SHA-256. |
-| sources.json | Sources utilisées et source SDES seulement repérée pour la suite. |
+| sources.json | Sources utilisées au CM1 et source SDES intégrée au CM2. |
 | departements.geojson | Contours Etalab 2026, simplification 1 000 mètres. |
 | empreintes.json | SHA-256 des fichiers livrés pour vérifier leur intégrité. |
 
@@ -28,6 +28,6 @@ Tous ces fichiers sont propres au projet recharge ; aucune dépendance au dépô
 - alerte : divergences de coordonnées ou de codes commune entre points d’une même station.
 - gratuit_declare / pmr : champs conservés au niveau point ; non validés indépendamment.
 
-Les contacts, téléphones et identifiants de raccordement du brut ne sont pas republiés. Le brut complet de 126,8 Mo reste dans work/ sur le PC ; son téléchargement est reproductible mais la source en ligne est évolutive. Aucun fichier de demande automobile n’a encore été intégré.
+Les contacts, téléphones et identifiants de raccordement du brut ne sont pas republiés. Le brut complet de 126,8 Mo reste dans work/ sur le PC ; son téléchargement est reproductible mais la source en ligne est évolutive. Le parc automobile agrégé au département, sa provenance et la jointure sont désormais disponibles dans [cm2/](../cm2/README.md). Le brut SDES reste dans work/ sur le PC.
 
 Licence des données sources : Licence Ouverte 2.0. Crédits PAN transport.data.gouv.fr et déclarants IRVE ; Etalab. Voir [la méthode complète](../cm1/README.md).

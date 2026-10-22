@@ -25,10 +25,19 @@
     "note": "Fichier 2026 déjà collecté le 16/10/2026 et réutilisé sans changement pour ce projet ; support cartographique seulement."
   },
   {
-    "statut": "Repérée, non téléchargée et non analysée au CM1",
-    "producteur": "SDES",
-    "url": "https://www.statistiques.developpement-durable.gouv.fr/donnees-sur-le-parc-automobile-francais-au-1er-janvier-2026",
-    "unite": "véhicules par territoire et motorisation",
-    "usage_futur": "Demande potentielle, après vérification des millésimes et de la disponibilité à la maille retenue"
+    "producteur": "SDES, RSVERO",
+    "url": "https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/datafiles/1582861b-e042-4490-9161-6429d8229703/csv",
+    "url_catalogue": "https://www.data.gouv.fr/datasets/parc-de-vehicules-routiers",
+    "url_resolue": "https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/datafiles/1582861b-e042-4490-9161-6429d8229703/csv",
+    "date_recuperation": "2026-10-22T14:35:19.959354+00:00",
+    "sha256": "a3fa8333ee7c4feafa2025bf0497f4b39e75e1bbdf59431bf69e3a2c3accb1a6",
+    "octets": 231903737,
+    "derniere_modification_http": null,
+    "licence": "Licence Ouverte 2.0",
+    "rythme": "annuel, données révisables",
+    "unite": "parc estimé par commune, année, motorisation, vignette, statut et genre",
+    "statut": "Source téléchargée et agrégée au CM2 ; non utilisée au CM1",
+    "fichier": "../cm2/parc_departements_2026.csv",
+    "usage": "Parc de VP électriques au 01/01/2026, jointure départementale au CM2"
   }
 ]
