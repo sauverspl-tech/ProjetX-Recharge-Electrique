@@ -1,0 +1,13 @@
+{
+  "producteur": "SDES, RSVERO",
+  "url": "https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/datafiles/1582861b-e042-4490-9161-6429d8229703/csv",
+  "url_catalogue": "https://www.data.gouv.fr/datasets/parc-de-vehicules-routiers",
+  "url_resolue": "https://data.statistiques.developpement-durable.gouv.fr/dido/api/v1/datafiles/1582861b-e042-4490-9161-6429d8229703/csv",
+  "date_recuperation": "2026-10-22T14:35:19.959354+00:00",
+  "sha256": "a3fa8333ee7c4feafa2025bf0497f4b39e75e1bbdf59431bf69e3a2c3accb1a6",
+  "octets": 231903737,
+  "derniere_modification_http": null,
+  "licence": "Licence Ouverte 2.0",
+  "rythme": "annuel, données révisables",
+  "unite": "parc estimé par commune, année, motorisation, vignette, statut et genre"
+}

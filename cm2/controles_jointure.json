@@ -1,0 +1,64 @@
+{
+  "controles": {
+    "points_cm1": 177464,
+    "points_rattaches": 172544,
+    "points_exclus_geographie": 4920,
+    "lignes_sdes": 2128015,
+    "lignes_sdes_vp": 786703,
+    "vp_2026_total_fichier": 39947297.0,
+    "vp_electriques_total_fichier": 1412828.0,
+    "vp_non_rattaches_departement": 852.0,
+    "vp_electriques_non_rattaches_departement": 15.0,
+    "departements_contours": 109,
+    "departements_avec_parc": 101,
+    "departements_jointure": 109,
+    "departements_analyse_principale": 96,
+    "vp_electriques_rattaches": 1412813.0,
+    "vp_electriques_jointure": 1412813.0
+  },
+  "methodes_rattachement_points": {
+    "code_et_polygone_concordants": 123146,
+    "code_valide_hors_polygones_exclu": 1323,
+    "departement_spatial_sans_code_valide": 49394,
+    "conflit_code_polygone_exclu": 2732,
+    "aucun_rattachement_exploitable": 865,
+    "code_seul_coordonnees_absentes": 4
+  },
+  "motifs_exclusion_points": {
+    "code_valide_hors_polygones_exclu": 1323,
+    "conflit_code_polygone_exclu": 2732,
+    "aucun_rattachement_exploitable": 865
+  },
+  "modalites_carburant_vp": {
+    "Essence HNR": 63288,
+    "Gaz": 40449,
+    "Diesel": 288985,
+    "Essence": 209373,
+    "Inconnu": 32653,
+    "Diesel HNR": 39108,
+    "Essence HR": 47230,
+    "Diesel HR": 14705,
+    "Electrique": 49596,
+    "Gaz HNR": 1095,
+    "Gaz HR": 59,
+    "Hydrogène et autre ZE": 162
+  },
+  "modalites_statut_vp": {
+    "Particulier": 523325,
+    "Professionel": 263378
+  },
+  "departements_parc_absents": [
+    "975",
+    "977",
+    "978",
+    "984",
+    "986",
+    "987",
+    "988",
+    "989"
+  ],
+  "principale": "départements métropolitains avec VP électriques et points recensés en accès libre strictement positifs ; zéros exclus du test et du graphique logarithmique mais conservés en table",
+  "unite": "point de recharge pour IRVE ; voiture particulière électrique pour SDES ; département après agrégation séparée",
+  "cle": "code département texte ; 2A et 2B conservés",
+  "attention": "Le point dans polygone attribue seulement un département aux coordonnées disponibles, pas une commune. Contours simplifiés à 1 km ; conflits et hors polygones exclus. Pas une certification de localisation."
+}

@@ -1,0 +1,55 @@
+{
+  "question": "Les départements avec davantage de voitures particulières électriques ont-ils davantage de points recensés en accès libre ?",
+  "H0": "corrélation de rang nulle",
+  "H1": "corrélation de rang différente de zéro, test bilatéral",
+  "alpha": 0.05,
+  "test": "Spearman avec permutation Monte-Carlo des rangs",
+  "n": 96,
+  "rho": 0.9342946381516968,
+  "permutations": 9999,
+  "graine": 20261022,
+  "p_permutation_conditionnelle": 0.0001,
+  "rho_sensibilite_code_seul": 0.9200477489689258,
+  "rho_sensibilite_tous_acces": 0.9402193449710626,
+  "vp_electriques_perimetre": 1389300.0,
+  "pdc_libres_perimetre": 150583.0,
+  "ratio_agrege_pdc_100_ve": 10.838767724753474,
+  "ratio_median_departements": 11.84063773047559,
+  "ratio_q1": 9.257478810358196,
+  "ratio_q3": 15.443602956822248,
+  "ratio_min": 4.454409044910493,
+  "ratio_max": 28.961991553678594,
+  "lecture_inferentielle": "p indicative sous échangeabilité ; territoires presque exhaustifs et dépendance spatiale possible. Pas une preuve de causalité, de besoin ou de rentabilité. Taille et temporalités confondantes.",
+  "exemples": {
+    "2A": {
+      "nom": "Corse-du-Sud",
+      "ve": 4032.0,
+      "pdc_libres": 462.0,
+      "ratio": 11.458333333333334
+    },
+    "2B": {
+      "nom": "Haute-Corse",
+      "ve": 7158.0,
+      "pdc_libres": 427.0,
+      "ratio": 5.965353450684549
+    },
+    "59": {
+      "nom": "Nord",
+      "ve": 53149.0,
+      "pdc_libres": 6217.0,
+      "ratio": 11.697303806280457
+    },
+    "63": {
+      "nom": "Puy-de-Dôme",
+      "ve": 13412.0,
+      "pdc_libres": 1520.0,
+      "ratio": 11.333134506412168
+    },
+    "75": {
+      "nom": "Paris",
+      "ve": 38163.0,
+      "pdc_libres": 5684.0,
+      "ratio": 14.894007284542619
+    }
+  }
+}
