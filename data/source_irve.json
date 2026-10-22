@@ -1,0 +1,14 @@
+{
+  "source_url": "https://www.data.gouv.fr/api/1/datasets/r/4ca78c71-4ea4-475d-bd3a-d4aef88f7bf8",
+  "resolved_url": "https://proxy.transport.data.gouv.fr/resource/consolidation-transport-irve-statique",
+  "retrieved_at": "2026-10-22T14:13:00.756407+00:00",
+  "sha256": "ea37fb9554c439c7524c57a86705d6e189908bca15aa99f2eb8a8e54cd0e261d",
+  "bytes": 126754972,
+  "last_modified_http": null,
+  "licence": "Licence Ouverte 2.0",
+  "producteur": "Point Accès National transport.data.gouv.fr ; déclarations opérateurs consolidées",
+  "rythme": "consolidation statique nocturne",
+  "unite": "point de recharge, pas connecteur ni station",
+  "cle": "id_pdc_itinerance",
+  "page": "https://www.data.gouv.fr/datasets/beta-bases-nationales-des-points-de-recharge-pour-vehicules-electriques-en-france-irve"
+}
