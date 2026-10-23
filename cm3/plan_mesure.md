@@ -34,3 +34,7 @@ Pour le site, choisir plus tard une mesure adaptée après validation de publica
 - Réussite de tâche sans aide et compréhension des limites : qualité d’usage, à relever par de vrais tests.
 
 Des compteurs faibles sur un service récemment diffusé ne prouvent pas un manque d’intérêt : documenter le canal, la date et la portée de la diffusion.
+
+## Publication réalisée
+
+Le site https://sauverspl-tech.github.io/ProjetX-Recharge-Electrique/ est maintenant public et a été vérifié dans le navigateur le 23 octobre 2026. Aucun outil de suivi des visites du site n’est intégré : les visites restent non mesurées. Les relevés précédents sont conservés comme historique. La mise en ligne ne constitue pas un test utilisateur.

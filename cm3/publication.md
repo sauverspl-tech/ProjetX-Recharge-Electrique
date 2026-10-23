@@ -1,19 +1,21 @@
-# Publication GitHub Pages préparée
+# Publication GitHub Pages réalisée
 
-Le dépôt `sauverspl-tech/ProjetX-Recharge-Electrique` est public, constaté sans connexion le 23 octobre 2026. Les anciennes mentions de dépôt privé ont été corrigées. La publication du prototype a été demandée par le propriétaire dans la conversation ; l’accès en écriture est maintenant disponible, mais le compte collaborateur ne dispose pas de l’administration permettant d’activer Pages.
+Le dépôt `sauverspl-tech/ProjetX-Recharge-Electrique` est public, constaté sans connexion le 23 octobre 2026. Les anciennes mentions de dépôt privé ont été corrigées. Les corrections ont été envoyées depuis la session Chrome de `sashatrecan`. Le propriétaire a activé Pages ; le déploiement a ensuite été relancé depuis GitHub. Le site public a été ouvert et ses données ont été vérifiées dans le navigateur.
 
 ## Déploiement
 
 Le workflow `.github/workflows/pages.yml` publie uniquement les fichiers produits par `scripts/preparer_pages.py` : `index.html`, `donnees.json`, `.nojekyll` et `README.md`. Il ne publie pas les grilles de tests ni les notes de groupe sur le site. Le dépôt source reste public.
 
-1. Envoyer les corrections sur `main` (préparées et vérifiées).
+1. Envoyer les corrections sur `main` (réalisé).
 2. Dans Settings → Pages → Build and deployment, sélectionner **GitHub Actions** comme source.
 3. Lancer le workflow « Publier le prototype CM3 » depuis Actions, ou laisser le push le déclencher.
 4. Attendre le succès du déploiement et ouvrir l’URL renvoyée par l’étape `deploy`.
 5. Tester une sélection, le lien direct Gironde, un territoire non comparable, l’export CSV et le formulaire de retour.
 6. Ajouter seulement alors le lien vérifié au README et au message de diffusion.
 
-URL attendue, **non vérifiée et à ne pas annoncer comme active** : https://sauverspl-tech.github.io/ProjetX-Recharge-Electrique/
+**URL publiée et vérifiée : https://sauverspl-tech.github.io/ProjetX-Recharge-Electrique/**
+
+Le comparateur charge ses 109 territoires ; le cas Gironde affiche 15,3 contre 10,8, comme dans les données du CM2. [Déploiement](https://github.com/sauverspl-tech/ProjetX-Recharge-Electrique/actions/runs/39955713657), deuxième tentative après activation de Pages.
 
 ## Retours et audience
 

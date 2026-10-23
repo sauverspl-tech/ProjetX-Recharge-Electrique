@@ -15,7 +15,7 @@ Consignes consultées le 23 octobre 2026 : https://mae.iae-mod.fr/seances/seance
 ## Visualiser
 Sur le PC où le serveur local est lancé : http://127.0.0.1:8767/cm3/index.html?departement=63
 
-Sinon télécharger et extraire le dépôt, démarrer un serveur local à sa racine (voir README principal), puis ouvrir /cm3/index.html. GitHub affiche le code du HTML ; aucun site public n’est encore publié.
+Sinon télécharger et extraire le dépôt, démarrer un serveur local à sa racine (voir README principal), puis ouvrir /cm3/index.html. GitHub affiche le code du HTML ; le [comparateur publié](https://sauverspl-tech.github.io/ProjetX-Recharge-Electrique/) est accessible sans téléchargement.
 
 Exemple Puy-de-Dôme : 1 520 points en accès libre / 13 412 voitures électriques × 100 = **11,3**, contre **10,8** sur les 96 départements métropolitains. Ce n’est pas une preuve de suffisance ou de rentabilité.
 
@@ -24,7 +24,7 @@ Le CM2 conserve l’analyse détaillée ; le CM3 donne une réponse directement 
 
 ## Ce qui reste à faire réellement
 1. Faire valider le public et l’écran par l’enseignant.
-2. Envoyer les corrections puis activer GitHub Pages depuis ce dépôt désormais public ; vérifier le déploiement avant de diffuser le lien.
+2. Publication réalisée : [GitHub Pages](https://sauverspl-tech.github.io/ProjetX-Recharge-Electrique/), vérifié dans le navigateur après activation et relance du déploiement.
 3. Recruter cinq personnes, observer leurs essais et renseigner la grille : **aucun test humain réalisé à ce stade**.
 4. Publier le message uniquement dans un espace autorisé, puis traiter les retours et refaire les relevés aux séances suivantes.
 

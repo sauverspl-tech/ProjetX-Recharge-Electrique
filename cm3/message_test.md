@@ -1,8 +1,8 @@
 # Message préparé — non envoyé
 
-Avant diffusion, remplacer `[URL vérifiée du site]` par l’URL renvoyée par GitHub Pages après un déploiement réussi. Ne pas diffuser une URL simplement supposée. Choisir un espace fréquenté par des chargés d’études mobilité, des collectivités ou des professionnels IRVE, où ce type de demande est autorisé.
+Le site est publié et son accès a été vérifié dans le navigateur le 23 octobre 2026. Le message ci-dessous est prêt, mais n’a pas été envoyé. Choisir un espace fréquenté par des chargés d’études mobilité, des collectivités ou des professionnels IRVE, où ce type de demande est autorisé.
 
-Bonjour, nous réalisons un projet de master sur la recharge électrique en France. Notre comparateur permet de situer un département par rapport au repère métropolitain à partir de données publiques : [URL vérifiée du site].
+Bonjour, nous réalisons un projet de master sur la recharge électrique en France. Notre comparateur permet de situer un département par rapport au repère métropolitain à partir de données publiques : [Recharge France](https://sauverspl-tech.github.io/ProjetX-Recharge-Electrique/).
 
 **Quel est le ratio affiché pour la Gironde, et est-il supérieur ou inférieur au repère métropolitain ?**
 

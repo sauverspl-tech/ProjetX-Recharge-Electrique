@@ -25,4 +25,10 @@ Contrôles effectués dans le navigateur sur les fichiers préparés pour GitHub
 - Canal de retour : lien vers le nouveau formulaire GitHub, avec mention du compte nécessaire et possibilité de retour direct au conducteur du test.
 - Préparation de publication : seulement quatre fichiers publics ; 109 codes uniques et 96 territoires comparables contrôlés.
 
-Le formulaire distant et le workflow ne pourront être testés qu’après envoi des modifications. Aucun test mobile réel ni test humain indépendant n’a été effectué. La publication n’a pas été réalisée : le compte collaborateur dispose maintenant de l’écriture mais pas de l’administration nécessaire à l’activation de Pages.
+Le formulaire distant et le workflow ne pourront être testés qu’après envoi des modifications. Aucun test mobile réel ni test humain indépendant n’a été effectué. La publication a ensuite été réalisée après activation de Pages par le propriétaire.
+
+## Vérification du site public
+
+Adresse vérifiée : https://sauverspl-tech.github.io/ProjetX-Recharge-Electrique/
+
+Le site charge les 109 territoires sans compte. La sélection Gironde affiche 15,3 points pour 100 voitures électriques contre 10,8 en métropole, avec calcul et phrase « supérieur ». Les étapes d’étude locale sont présentes. Le déploiement a été relancé après activation de Pages ; les tests humains et la diffusion auprès du public cible restent à réaliser.
