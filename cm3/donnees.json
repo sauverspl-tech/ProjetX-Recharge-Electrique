@@ -1,0 +1,902 @@
+{
+  "date_preparation": "2026-10-23",
+  "date_irve": "2026-10-22",
+  "date_parc": "2026-01-01",
+  "reference": {
+    "nom": "Métropole — 96 départements",
+    "ratio": 10.838767724753474,
+    "voitures": 1389300,
+    "points": 150583
+  },
+  "territoires": [
+    {
+      "code": "01",
+      "nom": "Ain",
+      "voitures": 17125,
+      "points": 1147,
+      "ratio": 6.697810218978102,
+      "comparable": true
+    },
+    {
+      "code": "02",
+      "nom": "Aisne",
+      "voitures": 8333,
+      "points": 880,
+      "ratio": 10.560422416896676,
+      "comparable": true
+    },
+    {
+      "code": "03",
+      "nom": "Allier",
+      "voitures": 4749,
+      "points": 830,
+      "ratio": 17.477363655506423,
+      "comparable": true
+    },
+    {
+      "code": "04",
+      "nom": "Alpes-de-Haute-Provence",
+      "voitures": 3486,
+      "points": 536,
+      "ratio": 15.375788869764774,
+      "comparable": true
+    },
+    {
+      "code": "05",
+      "nom": "Hautes-Alpes",
+      "voitures": 2308,
+      "points": 577,
+      "ratio": 25,
+      "comparable": true
+    },
+    {
+      "code": "06",
+      "nom": "Alpes-Maritimes",
+      "voitures": 34246,
+      "points": 2966,
+      "ratio": 8.660865502540442,
+      "comparable": true
+    },
+    {
+      "code": "07",
+      "nom": "Ardèche",
+      "voitures": 6388,
+      "points": 587,
+      "ratio": 9.189104571070757,
+      "comparable": true
+    },
+    {
+      "code": "08",
+      "nom": "Ardennes",
+      "voitures": 4182,
+      "points": 714,
+      "ratio": 17.073170731707318,
+      "comparable": true
+    },
+    {
+      "code": "09",
+      "nom": "Ariège",
+      "voitures": 2280,
+      "points": 327,
+      "ratio": 14.342105263157896,
+      "comparable": true
+    },
+    {
+      "code": "10",
+      "nom": "Aube",
+      "voitures": 5049,
+      "points": 976,
+      "ratio": 19.330560507031095,
+      "comparable": true
+    },
+    {
+      "code": "11",
+      "nom": "Aude",
+      "voitures": 6621,
+      "points": 1309,
+      "ratio": 19.770427427880986,
+      "comparable": true
+    },
+    {
+      "code": "12",
+      "nom": "Aveyron",
+      "voitures": 4293,
+      "points": 653,
+      "ratio": 15.210808292569299,
+      "comparable": true
+    },
+    {
+      "code": "13",
+      "nom": "Bouches-du-Rhône",
+      "voitures": 57885,
+      "points": 3984,
+      "ratio": 6.8826120756672715,
+      "comparable": true
+    },
+    {
+      "code": "14",
+      "nom": "Calvados",
+      "voitures": 16030,
+      "points": 2700,
+      "ratio": 16.843418590143482,
+      "comparable": true
+    },
+    {
+      "code": "15",
+      "nom": "Cantal",
+      "voitures": 1996,
+      "points": 319,
+      "ratio": 15.98196392785571,
+      "comparable": true
+    },
+    {
+      "code": "16",
+      "nom": "Charente",
+      "voitures": 6292,
+      "points": 995,
+      "ratio": 15.813731722822633,
+      "comparable": true
+    },
+    {
+      "code": "17",
+      "nom": "Charente-Maritime",
+      "voitures": 13856,
+      "points": 1379,
+      "ratio": 9.952367205542725,
+      "comparable": true
+    },
+    {
+      "code": "18",
+      "nom": "Cher",
+      "voitures": 4365,
+      "points": 634,
+      "ratio": 14.524627720504009,
+      "comparable": true
+    },
+    {
+      "code": "19",
+      "nom": "Corrèze",
+      "voitures": 4248,
+      "points": 618,
+      "ratio": 14.548022598870057,
+      "comparable": true
+    },
+    {
+      "code": "21",
+      "nom": "Côte-d'Or",
+      "voitures": 9860,
+      "points": 1588,
+      "ratio": 16.10547667342799,
+      "comparable": true
+    },
+    {
+      "code": "22",
+      "nom": "Côtes-d'Armor",
+      "voitures": 11053,
+      "points": 1337,
+      "ratio": 12.096263457884737,
+      "comparable": true
+    },
+    {
+      "code": "23",
+      "nom": "Creuse",
+      "voitures": 1185,
+      "points": 326,
+      "ratio": 27.51054852320675,
+      "comparable": true
+    },
+    {
+      "code": "24",
+      "nom": "Dordogne",
+      "voitures": 7371,
+      "points": 932,
+      "ratio": 12.644145977479312,
+      "comparable": true
+    },
+    {
+      "code": "25",
+      "nom": "Doubs",
+      "voitures": 10435,
+      "points": 1016,
+      "ratio": 9.73646382367034,
+      "comparable": true
+    },
+    {
+      "code": "26",
+      "nom": "Drôme",
+      "voitures": 12685,
+      "points": 1516,
+      "ratio": 11.951123374063854,
+      "comparable": true
+    },
+    {
+      "code": "27",
+      "nom": "Eure",
+      "voitures": 12360,
+      "points": 1308,
+      "ratio": 10.58252427184466,
+      "comparable": true
+    },
+    {
+      "code": "28",
+      "nom": "Eure-et-Loir",
+      "voitures": 7792,
+      "points": 843,
+      "ratio": 10.818788501026694,
+      "comparable": true
+    },
+    {
+      "code": "29",
+      "nom": "Finistère",
+      "voitures": 19152,
+      "points": 1613,
+      "ratio": 8.422096908939015,
+      "comparable": true
+    },
+    {
+      "code": "2A",
+      "nom": "Corse-du-Sud",
+      "voitures": 4032,
+      "points": 462,
+      "ratio": 11.458333333333334,
+      "comparable": true
+    },
+    {
+      "code": "2B",
+      "nom": "Haute-Corse",
+      "voitures": 7158,
+      "points": 427,
+      "ratio": 5.965353450684549,
+      "comparable": true
+    },
+    {
+      "code": "30",
+      "nom": "Gard",
+      "voitures": 19506,
+      "points": 1619,
+      "ratio": 8.300010253255408,
+      "comparable": true
+    },
+    {
+      "code": "31",
+      "nom": "Haute-Garonne",
+      "voitures": 37637,
+      "points": 3118,
+      "ratio": 8.284400988389086,
+      "comparable": true
+    },
+    {
+      "code": "32",
+      "nom": "Gers",
+      "voitures": 4198,
+      "points": 361,
+      "ratio": 8.599333015721772,
+      "comparable": true
+    },
+    {
+      "code": "33",
+      "nom": "Gironde",
+      "voitures": 38205,
+      "points": 5852,
+      "ratio": 15.317366836801465,
+      "comparable": true
+    },
+    {
+      "code": "34",
+      "nom": "Hérault",
+      "voitures": 28548,
+      "points": 3183,
+      "ratio": 11.149642707019757,
+      "comparable": true
+    },
+    {
+      "code": "35",
+      "nom": "Ille-et-Vilaine",
+      "voitures": 23092,
+      "points": 2143,
+      "ratio": 9.28027022345401,
+      "comparable": true
+    },
+    {
+      "code": "36",
+      "nom": "Indre",
+      "voitures": 2435,
+      "points": 616,
+      "ratio": 25.297741273100616,
+      "comparable": true
+    },
+    {
+      "code": "37",
+      "nom": "Indre-et-Loire",
+      "voitures": 13554,
+      "points": 1050,
+      "ratio": 7.746790615316511,
+      "comparable": true
+    },
+    {
+      "code": "38",
+      "nom": "Isère",
+      "voitures": 30982,
+      "points": 2668,
+      "ratio": 8.611451810728811,
+      "comparable": true
+    },
+    {
+      "code": "39",
+      "nom": "Jura",
+      "voitures": 4363,
+      "points": 427,
+      "ratio": 9.786843914737567,
+      "comparable": true
+    },
+    {
+      "code": "40",
+      "nom": "Landes",
+      "voitures": 9174,
+      "points": 1389,
+      "ratio": 15.14061478090255,
+      "comparable": true
+    },
+    {
+      "code": "41",
+      "nom": "Loir-et-Cher",
+      "voitures": 5599,
+      "points": 944,
+      "ratio": 16.86015359885694,
+      "comparable": true
+    },
+    {
+      "code": "42",
+      "nom": "Loire",
+      "voitures": 14144,
+      "points": 1493,
+      "ratio": 10.555712669683258,
+      "comparable": true
+    },
+    {
+      "code": "43",
+      "nom": "Haute-Loire",
+      "voitures": 3753,
+      "points": 314,
+      "ratio": 8.36664002131628,
+      "comparable": true
+    },
+    {
+      "code": "44",
+      "nom": "Loire-Atlantique",
+      "voitures": 31443,
+      "points": 3125,
+      "ratio": 9.938619088509366,
+      "comparable": true
+    },
+    {
+      "code": "45",
+      "nom": "Loiret",
+      "voitures": 12985,
+      "points": 1281,
+      "ratio": 9.865229110512129,
+      "comparable": true
+    },
+    {
+      "code": "46",
+      "nom": "Lot",
+      "voitures": 2880,
+      "points": 465,
+      "ratio": 16.145833333333332,
+      "comparable": true
+    },
+    {
+      "code": "47",
+      "nom": "Lot-et-Garonne",
+      "voitures": 6033,
+      "points": 813,
+      "ratio": 13.475882645450024,
+      "comparable": true
+    },
+    {
+      "code": "48",
+      "nom": "Lozère",
+      "voitures": 816,
+      "points": 193,
+      "ratio": 23.651960784313726,
+      "comparable": true
+    },
+    {
+      "code": "49",
+      "nom": "Maine-et-Loire",
+      "voitures": 17095,
+      "points": 1661,
+      "ratio": 9.716291313249489,
+      "comparable": true
+    },
+    {
+      "code": "50",
+      "nom": "Manche",
+      "voitures": 11313,
+      "points": 1620,
+      "ratio": 14.319809069212411,
+      "comparable": true
+    },
+    {
+      "code": "51",
+      "nom": "Marne",
+      "voitures": 10734,
+      "points": 1335,
+      "ratio": 12.437115707098938,
+      "comparable": true
+    },
+    {
+      "code": "52",
+      "nom": "Haute-Marne",
+      "voitures": 1934,
+      "points": 474,
+      "ratio": 24.50879007238883,
+      "comparable": true
+    },
+    {
+      "code": "53",
+      "nom": "Mayenne",
+      "voitures": 5910,
+      "points": 494,
+      "ratio": 8.358714043993231,
+      "comparable": true
+    },
+    {
+      "code": "54",
+      "nom": "Meurthe-et-Moselle",
+      "voitures": 14738,
+      "points": 1685,
+      "ratio": 11.433030261907993,
+      "comparable": true
+    },
+    {
+      "code": "55",
+      "nom": "Meuse",
+      "voitures": 2602,
+      "points": 243,
+      "ratio": 9.338970023059185,
+      "comparable": true
+    },
+    {
+      "code": "56",
+      "nom": "Morbihan",
+      "voitures": 14096,
+      "points": 1484,
+      "ratio": 10.527809307604993,
+      "comparable": true
+    },
+    {
+      "code": "57",
+      "nom": "Moselle",
+      "voitures": 21973,
+      "points": 3247,
+      "ratio": 14.777226596277249,
+      "comparable": true
+    },
+    {
+      "code": "58",
+      "nom": "Nièvre",
+      "voitures": 2496,
+      "points": 469,
+      "ratio": 18.790064102564102,
+      "comparable": true
+    },
+    {
+      "code": "59",
+      "nom": "Nord",
+      "voitures": 53149,
+      "points": 6217,
+      "ratio": 11.697303806280457,
+      "comparable": true
+    },
+    {
+      "code": "60",
+      "nom": "Oise",
+      "voitures": 17236,
+      "points": 1726,
+      "ratio": 10.013924344395452,
+      "comparable": true
+    },
+    {
+      "code": "61",
+      "nom": "Orne",
+      "voitures": 3427,
+      "points": 569,
+      "ratio": 16.603443244820543,
+      "comparable": true
+    },
+    {
+      "code": "62",
+      "nom": "Pas-de-Calais",
+      "voitures": 29242,
+      "points": 3183,
+      "ratio": 10.885028383831475,
+      "comparable": true
+    },
+    {
+      "code": "63",
+      "nom": "Puy-de-Dôme",
+      "voitures": 13412,
+      "points": 1520,
+      "ratio": 11.333134506412168,
+      "comparable": true
+    },
+    {
+      "code": "64",
+      "nom": "Pyrénées-Atlantiques",
+      "voitures": 13507,
+      "points": 1621,
+      "ratio": 12.001184570963204,
+      "comparable": true
+    },
+    {
+      "code": "65",
+      "nom": "Hautes-Pyrénées",
+      "voitures": 3492,
+      "points": 636,
+      "ratio": 18.213058419243985,
+      "comparable": true
+    },
+    {
+      "code": "66",
+      "nom": "Pyrénées-Orientales",
+      "voitures": 9527,
+      "points": 1363,
+      "ratio": 14.306707253070222,
+      "comparable": true
+    },
+    {
+      "code": "67",
+      "nom": "Bas-Rhin",
+      "voitures": 27502,
+      "points": 2446,
+      "ratio": 8.893898625554504,
+      "comparable": true
+    },
+    {
+      "code": "68",
+      "nom": "Haut-Rhin",
+      "voitures": 19572,
+      "points": 1615,
+      "ratio": 8.251583895360719,
+      "comparable": true
+    },
+    {
+      "code": "69",
+      "nom": "Rhône",
+      "voitures": 45628,
+      "points": 4094,
+      "ratio": 8.972560708336987,
+      "comparable": true
+    },
+    {
+      "code": "70",
+      "nom": "Haute-Saône",
+      "voitures": 3122,
+      "points": 309,
+      "ratio": 9.897501601537476,
+      "comparable": true
+    },
+    {
+      "code": "71",
+      "nom": "Saône-et-Loire",
+      "voitures": 9005,
+      "points": 1572,
+      "ratio": 17.456968350916156,
+      "comparable": true
+    },
+    {
+      "code": "72",
+      "nom": "Sarthe",
+      "voitures": 9309,
+      "points": 990,
+      "ratio": 10.634869481147277,
+      "comparable": true
+    },
+    {
+      "code": "73",
+      "nom": "Savoie",
+      "voitures": 10322,
+      "points": 1542,
+      "ratio": 14.93896531679907,
+      "comparable": true
+    },
+    {
+      "code": "74",
+      "nom": "Haute-Savoie",
+      "voitures": 22989,
+      "points": 2019,
+      "ratio": 8.782461177084693,
+      "comparable": true
+    },
+    {
+      "code": "75",
+      "nom": "Paris",
+      "voitures": 38163,
+      "points": 5684,
+      "ratio": 14.894007284542619,
+      "comparable": true
+    },
+    {
+      "code": "76",
+      "nom": "Seine-Maritime",
+      "voitures": 25964,
+      "points": 2503,
+      "ratio": 9.64027114466184,
+      "comparable": true
+    },
+    {
+      "code": "77",
+      "nom": "Seine-et-Marne",
+      "voitures": 29934,
+      "points": 3810,
+      "ratio": 12.728001603527762,
+      "comparable": true
+    },
+    {
+      "code": "78",
+      "nom": "Yvelines",
+      "voitures": 47128,
+      "points": 3173,
+      "ratio": 6.732727890001698,
+      "comparable": true
+    },
+    {
+      "code": "79",
+      "nom": "Deux-Sèvres",
+      "voitures": 5988,
+      "points": 1317,
+      "ratio": 21.993987975951903,
+      "comparable": true
+    },
+    {
+      "code": "80",
+      "nom": "Somme",
+      "voitures": 8647,
+      "points": 1353,
+      "ratio": 15.64704521799468,
+      "comparable": true
+    },
+    {
+      "code": "81",
+      "nom": "Tarn",
+      "voitures": 8558,
+      "points": 1552,
+      "ratio": 18.135078289319935,
+      "comparable": true
+    },
+    {
+      "code": "82",
+      "nom": "Tarn-et-Garonne",
+      "voitures": 5730,
+      "points": 677,
+      "ratio": 11.81500872600349,
+      "comparable": true
+    },
+    {
+      "code": "83",
+      "nom": "Var",
+      "voitures": 28104,
+      "points": 2422,
+      "ratio": 8.617990321662397,
+      "comparable": true
+    },
+    {
+      "code": "84",
+      "nom": "Vaucluse",
+      "voitures": 13669,
+      "points": 1622,
+      "ratio": 11.866266734947692,
+      "comparable": true
+    },
+    {
+      "code": "85",
+      "nom": "Vendée",
+      "voitures": 15196,
+      "points": 1233,
+      "ratio": 8.113977362463807,
+      "comparable": true
+    },
+    {
+      "code": "86",
+      "nom": "Vienne",
+      "voitures": 8998,
+      "points": 2606,
+      "ratio": 28.961991553678594,
+      "comparable": true
+    },
+    {
+      "code": "87",
+      "nom": "Haute-Vienne",
+      "voitures": 6676,
+      "points": 890,
+      "ratio": 13.331336129418814,
+      "comparable": true
+    },
+    {
+      "code": "88",
+      "nom": "Vosges",
+      "voitures": 6131,
+      "points": 911,
+      "ratio": 14.858913717175012,
+      "comparable": true
+    },
+    {
+      "code": "89",
+      "nom": "Yonne",
+      "voitures": 4867,
+      "points": 1058,
+      "ratio": 21.738237107047464,
+      "comparable": true
+    },
+    {
+      "code": "90",
+      "nom": "Territoire de Belfort",
+      "voitures": 2380,
+      "points": 314,
+      "ratio": 13.193277310924369,
+      "comparable": true
+    },
+    {
+      "code": "91",
+      "nom": "Essonne",
+      "voitures": 26847,
+      "points": 2248,
+      "ratio": 8.37337505121615,
+      "comparable": true
+    },
+    {
+      "code": "92",
+      "nom": "Hauts-de-Seine",
+      "voitures": 57314,
+      "points": 2553,
+      "ratio": 4.454409044910493,
+      "comparable": true
+    },
+    {
+      "code": "93",
+      "nom": "Seine-Saint-Denis",
+      "voitures": 19025,
+      "points": 1683,
+      "ratio": 8.846254927726676,
+      "comparable": true
+    },
+    {
+      "code": "94",
+      "nom": "Val-de-Marne",
+      "voitures": 19400,
+      "points": 2403,
+      "ratio": 12.38659793814433,
+      "comparable": true
+    },
+    {
+      "code": "95",
+      "nom": "Val-d'Oise",
+      "voitures": 21087,
+      "points": 1884,
+      "ratio": 8.934414568217385,
+      "comparable": true
+    },
+    {
+      "code": "971",
+      "nom": "Guadeloupe",
+      "voitures": 3927,
+      "points": 99,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "972",
+      "nom": "Martinique",
+      "voitures": 3360,
+      "points": 34,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "973",
+      "nom": "Guyane",
+      "voitures": 703,
+      "points": 0,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "974",
+      "nom": "La Réunion",
+      "voitures": 15305,
+      "points": 405,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "975",
+      "nom": "Saint-Pierre-et-Miquelon",
+      "voitures": null,
+      "points": 0,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "976",
+      "nom": "Mayotte",
+      "voitures": 218,
+      "points": 0,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "977",
+      "nom": "Saint-Barthélemy",
+      "voitures": null,
+      "points": 0,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "978",
+      "nom": "Saint-Martin",
+      "voitures": null,
+      "points": 0,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "984",
+      "nom": "Terres australes et antarctiques françaises",
+      "voitures": null,
+      "points": 0,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "986",
+      "nom": "Wallis et Futuna",
+      "voitures": null,
+      "points": 0,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "987",
+      "nom": "Polynésie française",
+      "voitures": null,
+      "points": 24,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "988",
+      "nom": "Nouvelle-Calédonie",
+      "voitures": null,
+      "points": 4,
+      "ratio": null,
+      "comparable": false
+    },
+    {
+      "code": "989",
+      "nom": "Île de Clipperton",
+      "voitures": null,
+      "points": 0,
+      "ratio": null,
+      "comparable": false
+    }
+  ],
+  "sources": [
+    {
+      "nom": "SDES — Parc de véhicules routiers",
+      "url": "https://www.data.gouv.fr/datasets/parc-de-vehicules-routiers",
+      "periode": "Parc au 01/01/2026, provisoire"
+    },
+    {
+      "nom": "PAN — Base nationale IRVE statique",
+      "url": "https://www.data.gouv.fr/datasets/beta-bases-nationales-des-points-de-recharge-pour-vehicules-electriques-en-france-irve",
+      "periode": "Snapshot conservé du 22/10/2026"
+    },
+    {
+      "nom": "Etalab — Contours administratifs",
+      "url": "https://etalab-datasets.geo.data.gouv.fr/contours-administratifs/2026/geojson/departements-1000m.geojson",
+      "periode": "Géographie 2026, simplification 1 km"
+    }
+  ]
+}

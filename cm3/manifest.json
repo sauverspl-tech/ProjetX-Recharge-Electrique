@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-23",
+  "source": "cm2/dashboard.json",
+  "source_sha256": "73eca90726cebc987128d4f3c3a339ac965f17c74f5281311595f76f00ca4b13",
+  "fichiers": [
+    {
+      "nom": "index.html",
+      "sha256": "1615f2dd0c3e210386dcc31b9e387d10cd69630438f92ff38fbec4049d8f77c1"
+    },
+    {
+      "nom": "donnees.json",
+      "sha256": "dff4959c7c2b9432444c64970ccc70a4400e55b83862b0c0ed4ce702c5ace083"
+    },
+    {
+      "nom": "publication_site.zip",
+      "sha256": "25b0befa092d83b8f28989985d2f59ecd2aadca1e0d6e17161830d40fb46a432"
+    }
+  ]
+}
