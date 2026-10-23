@@ -1,3 +1,6 @@
 work/
 __pycache__/
 *.pyc
+
+# Fichiers de déploiement générés
+_site/

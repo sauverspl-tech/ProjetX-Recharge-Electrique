@@ -2,7 +2,9 @@
 
 # ProjetX — Recharge électrique en France
 
-Projet MAE distinct de l’étude sur les bars. **Dépôt privé. CM1, CM2 et prototype CM3 disponibles.**
+Projet MAE distinct de l’étude sur les bars. **Dépôt public. CM1, CM2 et prototype CM3 disponibles.**
+
+Le déploiement GitHub Pages est préparé dans `.github/workflows/pages.yml`. Son activation et son URL doivent être vérifiées dans [Actions](https://github.com/sauverspl-tech/ProjetX-Recharge-Electrique/actions) et [Settings → Pages](https://github.com/sauverspl-tech/ProjetX-Recharge-Electrique/settings/pages). Voir le [guide de publication](cm3/publication.md).
 
 | Contenu | Accès |
 |---|---|
@@ -13,7 +15,7 @@ Projet MAE distinct de l’étude sur les bars. **Dépôt privé. CM1, CM2 et pr
 | Données et traçabilité | [Dossier data](data/README.md) |
 | Projet des bars, CM1 et CM2 déjà réalisés | [ProjetX — Bars](https://github.com/sauverspl-tech/ProjetX) |
 
-Pour utiliser la carte : télécharger et extraire le dépôt, ouvrir un terminal à sa racine, lancer `python -m http.server 8767 --bind 127.0.0.1` puis ouvrir http://127.0.0.1:8767/cm1/index.html. Sur GitHub, index.html affiche son code : GitHub Pages n’est pas activé. Les comptes rendus et fichiers de données sont accessibles directement aux comptes autorisés.
+Pour utiliser la carte : télécharger et extraire le dépôt, ouvrir un terminal à sa racine, lancer `python -m http.server 8767 --bind 127.0.0.1` puis ouvrir http://127.0.0.1:8767/cm1/index.html. Sur GitHub, index.html affiche son code : le site n’est pas publié tant que le déploiement Pages n’a pas réussi. Les comptes rendus et fichiers de données du dépôt sont publics.
 
 Le CM2 croise le parc de VP électriques et les PDC en accès libre au niveau départemental. La table conserve les territoires disponibles ; le graphique et le test portent sur les 96 départements métropolitains. Le tableau de bord local est accessible sur http://127.0.0.1:8767/cm2/index.html. Le changement de marché et la composition du groupe restent à confirmer auprès de l’enseignant. Les droits des collaborateurs du dépôt des bars ne sont pas automatiquement recopiés dans ce nouveau dépôt.
 
