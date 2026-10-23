@@ -5,7 +5,7 @@
   "fichiers": [
     {
       "nom": "index.html",
-      "sha256": "1615f2dd0c3e210386dcc31b9e387d10cd69630438f92ff38fbec4049d8f77c1"
+      "sha256": "038dc1f0670de359c278aaee42ec9eace4e945ad7ad464b6f0676936859fd58c"
     },
     {
       "nom": "donnees.json",
@@ -13,7 +13,7 @@
     },
     {
       "nom": "publication_site.zip",
-      "sha256": "25b0befa092d83b8f28989985d2f59ecd2aadca1e0d6e17161830d40fb46a432"
+      "sha256": "a93b057151fc53a3c73b9f3d723a388649a712b576bd8b67da0d49c9faf5d0f2"
     }
   ]
 }

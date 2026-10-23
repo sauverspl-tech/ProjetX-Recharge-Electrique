@@ -5,8 +5,8 @@
 Consignes consultées le 23 octobre 2026 : https://mae.iae-mod.fr/seances/seance-cm-3.html (version publiée « Un service utile »).
 
 ## Ce qui est réalisé
-- Proposition de valeur et public cible définis ; service distinct d’un outil de navigation en temps réel.
-- [Écran interactif](index.html) : un département, un graphique et une phrase de lecture ; export du résultat et lien vers la sélection.
+- Proposition de valeur et public cible définis ; service distinct d’un outil de navigation en temps réel. Question utilisateur : « Comment mon département se situe-t-il, et que dois-je vérifier avant une étude locale ? »
+- [Écran interactif](index.html) : un département, un graphique et une phrase de lecture ; export du résultat, lien vers la sélection et trois étapes concrètes pour préparer une étude locale.
 - [Données agrégées](donnees.json) reprises du CM2, sources et limites visibles dans l’interface.
 - [Protocole de cinq premiers tests](protocole_tests.md), [grille de retours](retours_tests.csv), [modèle d’issue](modele_issue.md) et [message de recrutement prêt à adapter](message_test.md).
 - [Relevé initial d’audience](suivi_audience.csv) et [plan de mesure](plan_mesure.md).
@@ -24,8 +24,8 @@ Le CM2 conserve l’analyse détaillée ; le CM3 donne une réponse directement 
 
 ## Ce qui reste à faire réellement
 1. Faire valider le public et l’écran par l’enseignant.
-2. Autoriser puis effectuer la publication d’une vitrine séparée, le dépôt de travail restant privé.
+2. Envoyer les corrections puis activer GitHub Pages depuis ce dépôt désormais public ; vérifier le déploiement avant de diffuser le lien.
 3. Recruter cinq personnes, observer leurs essais et renseigner la grille : **aucun test humain réalisé à ce stade**.
 4. Publier le message uniquement dans un espace autorisé, puis traiter les retours et refaire les relevés aux séances suivantes.
 
-Au 23 octobre : 0 étoile, 0 fork, 0 issue ouverte et 0 fermée sur le dépôt de travail. Traffic est indisponible avec l’offre actuelle pour ce dépôt privé : valeurs manquantes, pas zéros. Les visites du prototype ne sont pas mesurées. Ne pas présenter les contrôles de Codex comme une validation par des utilisateurs.
+Au 23 octobre : 0 étoile, 0 fork, 0 issue ouverte et 0 fermée sur le dépôt de travail. Le relevé historique concernait un dépôt privé. Le dépôt est maintenant public : Traffic doit être revérifié avec un compte disposant des droits nécessaires ; les valeurs inconnues restent manquantes, pas zéros. Les visites du prototype ne sont pas mesurées. Ne pas présenter les contrôles de Codex comme une validation par des utilisateurs.

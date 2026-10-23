@@ -30,4 +30,4 @@ Après chaque vague : classer les problèmes, corriger les plus importants, cons
 
 ## Canal et diffusion
 
-Le dépôt de travail est privé : les inconnus ne peuvent pas y déposer d’issue sans invitation. Un dépôt de vitrine public permettrait de recevoir des retours, après accord de publication. Le [message de sollicitation](message_test.md) est préparé, mais n’a pas été envoyé. Vérifier les règles de chaque communauté et demander un accord avant toute publication externe.
+Le dépôt est désormais public. Les testeurs ayant un compte GitHub peuvent utiliser le [formulaire de retour](https://github.com/sauverspl-tech/ProjetX-Recharge-Electrique/issues/new?template=retour-utilisateur.yml) après envoi des corrections. Les autres peuvent répondre à la personne qui conduit le test ; celle-ci transcrit les observations anonymisées dans la grille. Le [message de sollicitation](message_test.md) est préparé, mais n’a pas été envoyé. Vérifier les règles de chaque communauté et choisir un espace où cette sollicitation est autorisée avant diffusion.

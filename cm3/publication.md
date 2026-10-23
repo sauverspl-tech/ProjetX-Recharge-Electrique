@@ -1,9 +1,26 @@
-# Publication préparée, non effectuée
+# Publication GitHub Pages préparée
 
-Le dépôt de travail reste privé, conformément au choix de Bastien. GitHub Pages gratuit est disponible depuis un dépôt public ; les dépôts privés nécessitent une offre compatible : https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+Le dépôt `sauverspl-tech/ProjetX-Recharge-Electrique` est public, constaté sans connexion le 23 octobre 2026. Les anciennes mentions de dépôt privé ont été corrigées. La publication du prototype a été demandée par le propriétaire dans la conversation ; l’accès en écriture est maintenant disponible, mais le compte collaborateur ne dispose pas de l’administration permettant d’activer Pages.
 
-Proposition à approuver : créer un dépôt public séparé « Recharge-France-Site », contenant uniquement les quatre fichiers du paquet publication_site.zip : index.html, donnees.json, README.md et .nojekyll. Le paquet contient le prototype et les agrégats de données publiques déjà créditées, sans documents du groupe, notes de tests ni données internes Valeo.
+## Déploiement
 
-Après accord : créer le dépôt, déposer ces fichiers, activer Pages sur main à la racine, vérifier l’URL réellement obtenue puis mettre à jour les liens du message de test et du prototype. Aucun lien public n’est annoncé avant vérification. L’écran actuel indique que le canal de retour n’est pas encore publié.
+Le workflow `.github/workflows/pages.yml` publie uniquement les fichiers produits par `scripts/preparer_pages.py` : `index.html`, `donnees.json`, `.nojekyll` et `README.md`. Il ne publie pas les grilles de tests ni les notes de groupe sur le site. Le dépôt source reste public.
 
-Le protocole et le message sont prêts mais aucune publication externe ni observation humaine n’a eu lieu. Relever les compteurs du dépôt public séparément de ceux du dépôt privé. Ne pas confondre Traffic du dépôt et visites du site.
+1. Envoyer les corrections sur `main` (préparées et vérifiées).
+2. Dans Settings → Pages → Build and deployment, sélectionner **GitHub Actions** comme source.
+3. Lancer le workflow « Publier le prototype CM3 » depuis Actions, ou laisser le push le déclencher.
+4. Attendre le succès du déploiement et ouvrir l’URL renvoyée par l’étape `deploy`.
+5. Tester une sélection, le lien direct Gironde, un territoire non comparable, l’export CSV et le formulaire de retour.
+6. Ajouter seulement alors le lien vérifié au README et au message de diffusion.
+
+URL attendue, **non vérifiée et à ne pas annoncer comme active** : https://sauverspl-tech.github.io/ProjetX-Recharge-Electrique/
+
+## Retours et audience
+
+Les retours sont reçus dans les issues de ce dépôt public. Un compte GitHub est nécessaire ; les testeurs sans compte peuvent répondre à la personne qui conduit le test. Le formulaire évite de demander des coordonnées personnelles.
+
+Traffic mesure les accès au dépôt, pas les visites de GitHub Pages. Les compteurs inconnus restent vides. Aucun test humain et aucune diffusion auprès d’une communauté ne sont présentés comme réalisés.
+
+## Préparation locale
+
+Depuis la racine : `python3 scripts/preparer_pages.py`, puis `python3 -m http.server 8767 --bind 127.0.0.1 --directory _site`. Le paquet `cm3/publication_site.zip` contient la même sélection de fichiers pour une publication manuelle.

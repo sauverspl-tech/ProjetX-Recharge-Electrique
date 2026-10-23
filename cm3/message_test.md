@@ -1,11 +1,11 @@
 # Message préparé — non envoyé
 
-À publier seulement après validation de l’accès public, sur un espace fréquenté par des professionnels du déploiement IRVE ou des études mobilité, dans le respect des règles de la communauté. Remplacer les deux champs avant envoi.
+Avant diffusion, remplacer `[URL vérifiée du site]` par l’URL renvoyée par GitHub Pages après un déploiement réussi. Ne pas diffuser une URL simplement supposée. Choisir un espace fréquenté par des chargés d’études mobilité, des collectivités ou des professionnels IRVE, où ce type de demande est autorisé.
 
-Bonjour, nous préparons un projet de master sur l’offre de recharge électrique en France. Nous avons réalisé un comparateur départemental à partir de données publiques : [lien du site publié à ajouter].
+Bonjour, nous réalisons un projet de master sur la recharge électrique en France. Notre comparateur permet de situer un département par rapport au repère métropolitain à partir de données publiques : [URL vérifiée du site].
 
-Une question précise pour le tester : **quel est le ratio affiché pour la Gironde, et est-il supérieur ou inférieur au repère métropolitain ?**
+**Quel est le ratio affiché pour la Gironde, et est-il supérieur ou inférieur au repère métropolitain ?**
 
-Si vous acceptez de l’essayer, indiquez l’endroit où vous avez hésité ou l’information qui vous manque dans une issue : [lien des issues du dépôt public à ajouter]. Merci de ne pas inclure de données personnelles.
+Dites-nous où vous avez hésité ou quelle information vous a manqué dans une [issue GitHub](https://github.com/sauverspl-tech/ProjetX-Recharge-Electrique/issues/new?template=retour-utilisateur.yml). Un compte GitHub est nécessaire ; vous pouvez aussi répondre directement à ce message. Merci de ne pas inclure de données personnelles.
 
-L’outil décrit l’offre recensée : il ne donne ni disponibilité en temps réel ni recommandation d’implantation.
+L’outil ne donne ni disponibilité en temps réel ni recommandation d’implantation. Merci pour votre retour !
