@@ -12,11 +12,11 @@ def main():
     assert sum(bool(t["comparable"]) for t in data["territoires"]) == 96
     assert len({t["code"] for t in data["territoires"]}) == 109
     OUT.mkdir(exist_ok=True)
-    expected = {"index.html", "donnees.json", "carte.json", "carte.js", ".nojekyll", "README.md"}
+    expected = {"index.html", "donnees.json", "carte.json", "carte.js", "temps-reel.js", ".nojekyll", "README.md"}
     unexpected = {p.name for p in OUT.iterdir()} - expected
     if unexpected:
         raise RuntimeError("Dossier de publication non vide : " + ", ".join(sorted(unexpected)))
-    for name in ("index.html", "donnees.json", "carte.json", "carte.js"):
+    for name in ("index.html", "donnees.json", "carte.json", "carte.js", "temps-reel.js"):
         shutil.copyfile(ROOT / "cm3" / name, OUT / name)
     (OUT / ".nojekyll").write_text("")
     (OUT / "README.md").write_text(
