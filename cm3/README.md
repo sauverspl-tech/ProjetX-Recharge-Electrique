@@ -6,7 +6,7 @@ Consignes consultées le 23 octobre 2026 : https://mae.iae-mod.fr/seances/seance
 
 ## Ce qui est réalisé
 - Proposition de valeur et public cible définis ; service distinct d’un outil de navigation en temps réel. Question utilisateur : « Comment mon département se situe-t-il, et que dois-je vérifier avant une étude locale ? »
-- [Écran interactif](index.html) : un département, un graphique et une phrase de lecture ; export du résultat, lien vers la sélection et trois étapes concrètes pour préparer une étude locale.
+- [Écran interactif](index.html) : un département, un graphique, une carte des sites et une phrase de lecture ; export du résultat, lien vers la sélection et trois étapes concrètes pour préparer une étude locale.
 - [Données agrégées](donnees.json) reprises du CM2, sources et limites visibles dans l’interface.
 - [Protocole de cinq premiers tests](protocole_tests.md), [grille de retours](retours_tests.csv), [modèle d’issue](modele_issue.md) et [message de recrutement prêt à adapter](message_test.md).
 - [Relevé initial d’audience](suivi_audience.csv) et [plan de mesure](plan_mesure.md).
@@ -29,3 +29,14 @@ Le CM2 conserve l’analyse détaillée ; le CM3 donne une réponse directement 
 4. Publier le message uniquement dans un espace autorisé, puis traiter les retours et refaire les relevés aux séances suivantes.
 
 Au 23 octobre : 0 étoile, 0 fork, 0 issue ouverte et 0 fermée sur le dépôt de travail. Le relevé historique concernait un dépôt privé. Le dépôt est maintenant public : Traffic doit être revérifié avec un compte disposant des droits nécessaires ; les valeurs inconnues restent manquantes, pas zéros. Les visites du prototype ne sont pas mesurées. Ne pas présenter les contrôles de Codex comme une validation par des utilisateurs.
+
+
+## Carte départementale des sites de recharge
+
+La sélection d’un département affiche son contour et les sites de recharge recensés en accès libre. Les points sont regroupés par identifiant de station ; les stations aux mêmes coordonnées à cinq décimales sont réunies sur un seul repère. Le nombre inscrit et l’infobulle indiquent le total des points de recharge. Un clic (ou toucher) affiche l’adresse et les opérateurs. Aucun regroupement par rayon n’est appliqué aux sites voisins.
+
+Puy-de-Dôme : **333 sites cartographiés, 1 520 points de recharge**. Exemple vérifié : LFR4102EVCP05 à Lempdes, **10 points sur un seul repère**. Gironde : 990 sites et 5 852 points. Les 109 territoires conservent le périmètre et les règles de rattachement du CM2. Quatre points de la base rattachée n’ont pas de coordonnées : ils restent dans les totaux sans être inventés sur la carte.
+
+La carte ne certifie pas l’emprise physique d’un parking : deux stations proches avec des coordonnées différentes peuvent rester deux repères. Les nombres indiquent des points recensés, pas des places disponibles en temps réel. La géographie simplifiée et la couverture inégale restent des limites.
+
+Reproduire : `python3 scripts/preparer_carte.py`, puis `python3 scripts/preparer_pages.py`. La génération contrôle que chaque total départemental est identique au CM2. Les fonds OpenStreetMap et Leaflet nécessitent une connexion ; une erreur cartographique ne bloque pas le comparateur.

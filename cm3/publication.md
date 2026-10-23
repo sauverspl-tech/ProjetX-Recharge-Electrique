@@ -4,7 +4,7 @@ Le dépôt `sauverspl-tech/ProjetX-Recharge-Electrique` est public, constaté sa
 
 ## Déploiement
 
-Le workflow `.github/workflows/pages.yml` publie uniquement les fichiers produits par `scripts/preparer_pages.py` : `index.html`, `donnees.json`, `.nojekyll` et `README.md`. Il ne publie pas les grilles de tests ni les notes de groupe sur le site. Le dépôt source reste public.
+Le workflow `.github/workflows/pages.yml` publie uniquement les fichiers produits par `scripts/preparer_pages.py` : `index.html`, `donnees.json`, `carte.json`, `carte.js`, `.nojekyll` et `README.md`. Il ne publie pas les grilles de tests ni les notes de groupe sur le site. Le dépôt source reste public.
 
 1. Envoyer les corrections sur `main` (réalisé).
 2. Dans Settings → Pages → Build and deployment, sélectionner **GitHub Actions** comme source.

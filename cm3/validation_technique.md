@@ -32,3 +32,14 @@ Le formulaire distant et le workflow ne pourront être testés qu’après envoi
 Adresse vérifiée : https://sauverspl-tech.github.io/ProjetX-Recharge-Electrique/
 
 Le site charge les 109 territoires sans compte. La sélection Gironde affiche 15,3 points pour 100 voitures électriques contre 10,8 en métropole, avec calcul et phrase « supérieur ». Les étapes d’étude locale sont présentes. Le déploiement a été relancé après activation de Pages ; les tests humains et la diffusion auprès du public cible restent à réaliser.
+
+
+## Carte départementale — vérifications de la nouvelle version
+
+- Génération : 35 759 sites, issus de 46 301 identifiants de stations en accès libre avec coordonnées exploitables. 151 145 points cartographiés, 4 sans coordonnées.
+- Conservation des effectifs : pour chacun des 109 territoires, somme des points des sites + points sans coordonnées = effectif en accès libre de la jointure CM2.
+- Puy-de-Dôme : 333 repères pour 1 520 points ; un seul repère LFR4102EVCP05 affiche 10 points dans l’infobulle et la fiche, avec opérateur Lidl France et adresse à Lempdes.
+- Changement vers la Gironde : ancien contour et anciens repères retirés ; 990 sites, 5 852 points.
+- Retour à la sélection vide : carte et résultat masqués. Retour au Puy-de-Dôme : données restaurées.
+- Les noms très longs sont abrégés pour préserver la lisibilité de la fiche. Les chaînes issues des données sont échappées avant affichage HTML.
+- Les contrôles ci-dessus ont été effectués en local avant publication. Aucun test utilisateur indépendant n’est revendiqué.

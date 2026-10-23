@@ -5,15 +5,23 @@
   "fichiers": [
     {
       "nom": "index.html",
-      "sha256": "038dc1f0670de359c278aaee42ec9eace4e945ad7ad464b6f0676936859fd58c"
+      "sha256": "445b66cbe9224ee952223ecf7c914799cdbe176cbacfd4986c4b86aed8a582d2"
     },
     {
       "nom": "donnees.json",
       "sha256": "dff4959c7c2b9432444c64970ccc70a4400e55b83862b0c0ed4ce702c5ace083"
     },
     {
+      "nom": "carte.json",
+      "sha256": "3e5e417af606842d061905dfea6c223c8091d8e46910c7a40d736db87e3df101"
+    },
+    {
+      "nom": "carte.js",
+      "sha256": "249b21a0b63dcaf5c613efc179035784f003b569bc8dd58b8f81568e3e455367"
+    },
+    {
       "nom": "publication_site.zip",
-      "sha256": "a93b057151fc53a3c73b9f3d723a388649a712b576bd8b67da0d49c9faf5d0f2"
+      "sha256": "124ac6db5e023de2b4187972b33986302452bce798e3c2fad275376e92a135ae"
     }
   ]
 }
