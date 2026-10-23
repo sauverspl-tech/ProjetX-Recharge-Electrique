@@ -2,6 +2,16 @@
 (() => {
   const $=id=>document.getElementById(id),fmt=n=>Number(n).toLocaleString('fr-FR');
   const escape=value=>String(value||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  // Coordonnées du site recensé, jamais la position de l’utilisateur.
+  function navigation(site,label){
+    const lat=site.lat,lon=site.lon;
+    if(typeof lat!=='number'||typeof lon!=='number'||!Number.isFinite(lat)||!Number.isFinite(lon)||Math.abs(lat)>90||Math.abs(lon)>180)return '<p>Itinéraire indisponible : coordonnées non valides.</p>';
+    const position=encodeURIComponent(lat+','+lon);
+    const style='display:inline-block;margin:8px 6px 4px 0;padding:10px 12px;border-radius:7px;background:#e6f3f0;color:#173247;font-weight:700;text-decoration:none';
+    return '<div aria-label="Itinéraire vers la station"><a target="_blank" rel="noopener noreferrer" style="'+style+'" href="https://www.waze.com/ul?ll='+position+'&amp;navigate=yes" aria-label="'+escape('Y aller avec Waze : '+label)+'">Y aller avec Waze ↗</a><a target="_blank" rel="noopener noreferrer" style="'+style+'" href="https://www.google.com/maps/dir/?api=1&amp;destination='+position+'&amp;travelmode=driving" aria-label="'+escape('Itinéraire Google Maps : '+label)+'">Google Maps ↗</a><br><small>Ouvre votre application ou le site de navigation vers les coordonnées recensées. Vérifiez l’entrée du parking et les conditions d’accès.</small></div>';
+  }
+
   const R=window.IRVERealtime;
   let map,markers,boundary,payload,requested='',revision=0,selectedBounds,sites=[],entries=[];
   let liveIndex=null,lastFetched=0,fetching=false,controller=null,lastError='',pollTimer=null,ageTimer=null;
@@ -29,7 +39,7 @@
       const states=fmt(c.available)+' disponibles · '+fmt(c.busy)+' occupés · '+fmt(c.out)+' hors service · '+fmt(c.reserved)+' réservés · '+fmt(c.unknown)+' inconnus';
       const tooltip='<strong>'+fmt(site.points)+' points de recharge</strong><br>'+escape(summary)+'<br>'+escape(label);
       const times=known?'<br>Horodatages retenus : '+date(c.oldest)+(c.oldest!==c.newest?' à '+date(c.newest):'')+' (heure locale).':'';
-      const content=tooltip+'<br>'+escape(site.adresse||'Adresse non renseignée')+'<br>Opérateur(s) : '+escape(site.operateur||'Non renseigné')+'<hr>'+escape(states)+times+(site.stations>1?'<br>'+fmt(site.stations)+' identifiants de station regroupés.':'')+'<br><small>Disponibilité déclarée par les opérateurs ; ne garantit pas une place libre à l’arrivée. Total recensé au 22/10/2026.</small>';
+      const content=tooltip+'<br>'+escape(site.adresse||'Adresse non renseignée')+'<br>Opérateur(s) : '+escape(site.operateur||'Non renseigné')+'<hr>'+escape(states)+times+(site.stations>1?'<br>'+fmt(site.stations)+' identifiants de station regroupés.':'')+navigation(site,label)+'<br><small>Disponibilité déclarée par les opérateurs ; ne garantit pas une place libre à l’arrivée. Total recensé au 22/10/2026.</small>';
       marker.setIcon(L.divIcon({className:'site-marker',html:'<span class="site-dot '+kind+'">'+count+'</span>',iconSize:[48,28],iconAnchor:[24,14]}));
       marker.setTooltipContent(tooltip);marker.setPopupContent(content);
       const el=marker.getElement();if(el){el.setAttribute('aria-label',label+' : '+summary);el.title=label+' : '+summary;}
@@ -95,3 +105,4 @@
   window.addEventListener('departement-change',e=>show(e.detail));
   if($('departement').value)show($('departement').value);
 })();
+
