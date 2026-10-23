@@ -1,0 +1,36 @@
+name: Retour sur le comparateur
+description: Signaler une hésitation, un problème ou une information manquante.
+title: "[Retour utilisateur] "
+body:
+  - type: markdown
+    attributes:
+      value: "Merci ! Les réponses sont publiques. Ne transmettez pas de nom réel, de coordonnées ni de capture contenant des données personnelles."
+  - type: input
+    id: departement
+    attributes:
+      label: Département testé
+      placeholder: "Exemple : Gironde (33)"
+    validations:
+      required: true
+  - type: textarea
+    id: tache
+    attributes:
+      label: Que cherchiez-vous à savoir ?
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Où avez-vous hésité ou rencontré un problème ?
+      description: Décrivez ce que vous avez fait et ce que l’écran a affiché.
+    validations:
+      required: true
+  - type: textarea
+    id: manque
+    attributes:
+      label: Quelle information vous a manqué ?
+  - type: input
+    id: appareil
+    attributes:
+      label: Appareil et navigateur (facultatif)
+      placeholder: "Exemple : téléphone Android, Chrome"
