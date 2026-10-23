@@ -5,6 +5,8 @@ on:
     paths:
       - cm3/index.html
       - cm3/donnees.json
+      - cm3/carte.json
+      - cm3/carte.js
       - scripts/preparer_pages.py
       - .github/workflows/pages.yml
   workflow_dispatch:
