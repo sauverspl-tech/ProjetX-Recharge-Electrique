@@ -43,3 +43,13 @@ Le site charge les 109 territoires sans compte. La sélection Gironde affiche 15
 - Retour à la sélection vide : carte et résultat masqués. Retour au Puy-de-Dôme : données restaurées.
 - Les noms très longs sont abrégés pour préserver la lisibilité de la fiche. Les chaînes issues des données sont échappées avant affichage HTML.
 - Les contrôles ci-dessus ont été effectués en local avant publication. Aucun test utilisateur indépendant n’est revendiqué.
+
+
+## Disponibilités en temps réel — contrôle du 23 octobre 2026
+
+- Flux officiel national téléchargé et lu depuis le navigateur avec les autorisations CORS publiques. 125 685 lignes dans le relevé technique initial ; des dates sans fuseau et des doublons existent : ils ne sont pas considérés comme des statuts frais certains.
+- Jointure exacte par identifiant public de point, sans rapprochement géographique des statuts ; la génération conserve les identifiants de tous les points de chaque site.
+- Tests automatisés : CSV avec BOM, guillemets, virgules et retours à la ligne ; dates avec et sans fuseau ; fraîcheur ; horloge future ; hors service prioritaire ; doublons contradictoires ; couverture partielle et conservation des effectifs.
+- Navigateur, Puy-de-Dôme : lors d’un relevé local, 33 disponibles confirmés, 35 occupés, 3 hors service/réservés, 1 449 inconnus (total 1 520). Ces nombres sont variables, pas des valeurs promises.
+- Filtre activé : 22 sites avaient au moins un point disponible confirmé lors du contrôle. Mise en pause : 0 disponibilité annoncée, 1 520 statuts inconnus, aucun repère disponible conservé par le filtre.
+- Aucun résultat humain ni aucune disponibilité simulée en production.

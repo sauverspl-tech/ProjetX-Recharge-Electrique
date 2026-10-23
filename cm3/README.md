@@ -40,3 +40,16 @@ Puy-de-Dôme : **333 sites cartographiés, 1 520 points de recharge**. Exemple v
 La carte ne certifie pas l’emprise physique d’un parking : deux stations proches avec des coordonnées différentes peuvent rester deux repères. Les nombres indiquent des points recensés, pas des places disponibles en temps réel. La géographie simplifiée et la couverture inégale restent des limites.
 
 Reproduire : `python3 scripts/preparer_carte.py`, puis `python3 scripts/preparer_pages.py`. La génération contrôle que chaque total départemental est identique au CM2. Les fonds OpenStreetMap et Leaflet nécessitent une connexion ; une erreur cartographique ne bloque pas le comparateur.
+
+
+## Disponibilités déclarées en temps réel
+
+La carte interroge directement le [flux national IRVE dynamique du PAN](https://proxy.transport.data.gouv.fr/resource/consolidation-nationale-irve-dynamique), sans clé API ni serveur intermédiaire, toutes les 60 secondes tant que l’onglet est visible et le suivi activé. Le flux est en bêta, non validé et non dédoublonné par le producteur. La source est décrite dans le [jeu de données national](https://www.data.gouv.fr/datasets/beta-bases-nationales-des-points-de-recharge-pour-vehicules-electriques-en-france-irve).
+
+La liaison se fait par identifiant de point `id_pdc_itinerance` exactement égal à l’identifiant conservé dans le snapshot statique. Chaque repère conserve le total recensé ; le compteur affiche « disponibles confirmés / total ». Le filtre garde les sites ayant au moins un point disponible confirmé. Les fiches distinguent disponibles, occupés, hors service, réservés et inconnus, avec horodatages.
+
+Règles : ne retenir que les horodatages avec fuseau explicite de moins de 15 minutes (tolérance de deux minutes pour une horloge en avance) ; retenir la version la plus récente d’un identifiant ; un doublon contradictoire à même date devient inconnu. `hors_service` prime toujours sur `libre`. Une panne du flux, un arrêt du suivi ou un cache trop ancien remettent les statuts à inconnu. Les états n’ont aucune incidence sur les ratios historiques du CM2.
+
+La couverture est partielle : l’absence de statut ne signifie ni occupation ni panne. Le seuil de 15 minutes est un choix prudent du prototype, pas une garantie de fraîcheur d’un opérateur. Un état trop ancien peut encore être exact, mais n’est pas annoncé comme actuel. Le flux complet représente environ 9 Mo non compressés par consultation ; les téléchargements périodiques sont suspendus quand l’onglet est masqué. Aucun historique dynamique n’est publié dans le dépôt.
+
+Tests : `node tests/temps_reel.test.cjs`. Le jeu de tests utilise uniquement des exemples synthétiques pour les règles ; l’écran de production affiche exclusivement le flux officiel.
