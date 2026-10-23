@@ -5,8 +5,12 @@ on:
     paths:
       - cm3/index.html
       - cm3/donnees.json
-      - cm3/carte.json
       - cm3/carte.js
+      - cm3/temps-reel.js
+      - tests/temps_reel.test.cjson
+      - cm3/carte.js
+      - cm3/temps-reel.js
+      - tests/temps_reel.test.cjs
       - scripts/preparer_pages.py
       - .github/workflows/pages.yml
   workflow_dispatch:
@@ -20,6 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Vérifier les règles de disponibilité
+        run: node tests/temps_reel.test.cjs
       - name: Préparer les fichiers publics
         run: python3 scripts/preparer_pages.py
       - uses: actions/upload-pages-artifact@v3
