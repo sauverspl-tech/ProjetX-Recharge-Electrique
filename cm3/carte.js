@@ -25,7 +25,7 @@
   const R=window.IRVERealtime;
   let map,markers,boundary,userMarker,radiusLayer,payloadPromise,allSites,requested='',revision=0,selectedBounds,sites=[],entries=new Map(),listed=[];
   let origin=null,watchId=null,liveIndex=null,lastFetched=0,fetching=false,controller=null,lastError='',pollTimer,ageTimer;
-  const enabled=()=>$('live-enabled').checked, radius=()=>Number($('near-radius').value);
+  const enabled=()=>true, radius=()=>Number($('near-radius').value);
   const clock=v=>new Date(v).toLocaleTimeString('fr-FR');
   const key=s=>s.departement+'|'+s.lat.toFixed(5)+'|'+s.lon.toFixed(5);
   function navigation(site,label){
@@ -43,7 +43,7 @@
     if(map)return;if(!window.L)throw Error('La carte n’a pas pu être chargée.');
     map=L.map('station-map',{scrollWheelZoom:false});
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
-    markers=L.layerGroup().addTo(map);
+    markers=(L.markerClusterGroup?L.markerClusterGroup({maxClusterRadius:45,disableClusteringAtZoom:15,showCoverageOnHover:false,iconCreateFunction:c=>L.divIcon({className:'station-cluster-icon',html:'<span class="station-cluster">'+c.getChildCount()+'</span>',iconSize:[43,43]})}):L.layerGroup()).addTo(map);
     $('map-reset').onclick=fit;
   }
   async function payload(){
@@ -140,7 +140,7 @@
         $('map-title').textContent=contour.properties.nom+' : les stations';
       }
       paintOrigin();$('map-summary').textContent=fmt(sites.length)+' sites · '+fmt(sites.reduce((n,s)=>n+s.points,0))+' points de recharge recensés'+(origin?' · rayon '+radius()+' km, départements voisins inclus':'');
-      $('map-reset').hidden=false;$('search-here').disabled=false;update();fit();timers();if(!lastFetched||Date.now()-lastFetched>60000)refresh();
+      $('map-reset').hidden=false;$('search-here').disabled=false;update();fit();switchResultView(resultView);timers();if(!lastFetched||Date.now()-lastFetched>60000)refresh();
       $('map-status').textContent='Les positions sont issues du recensement du 22/10/2026. Touchez un repère pour ouvrir la fiche. Les sites non recensés ou sans coordonnées ne sont pas représentés.';
     }catch(e){if(current!==revision)return;$('station-map').hidden=true;$('map-summary').classList.add('map-error');$('map-summary').textContent=e.message;$('station-results').innerHTML='';}
   }
@@ -161,14 +161,28 @@
       stopWatch();if(origin?.source==='gps')resetNearby();$('near-status').textContent=error.code===1?'Localisation refusée. Choisissez un département ou utilisez « Chercher ici » sur la carte.':error.code===3?'La position n’a pas pu être obtenue à temps. Réessayez ou utilisez « Chercher ici ».':'Position indisponible. Réessayez ou choisissez un département.';
     },{enableHighAccuracy:false,maximumAge:60000,timeout:15000});
   };
+
+  let resultView='map';
+  function switchResultView(view){
+    resultView=view;$('station-map').hidden=view!=='map'||!requested;
+    document.querySelector('.station-list-panel').hidden=view!=='list';
+    $('show-map').setAttribute('aria-pressed',String(view==='map'));$('show-list').setAttribute('aria-pressed',String(view==='list'));
+    if(view==='map'&&map)map.invalidateSize();
+  }
+  function drawer(open){document.body.classList.toggle('map-filters-open',open);$('open-filters').setAttribute('aria-expanded',String(open));}
+  $('open-filters').onclick=()=>drawer(true);$('close-filters').onclick=()=>drawer(false);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')drawer(false)});
+  $('show-map').onclick=()=>{switchResultView('map');fit()};$('show-list').onclick=()=>switchResultView('list');
+
   $('leave-nearby').onclick=resetNearby;
   $('search-here').onclick=()=>{if(!map)return;stopWatch();const center=map.getCenter();setOrigin({lat:center.lat,lon:center.lng,source:'carte'});};
   $('near-radius').onchange=()=>origin&&show('nearby');
   $('station-sort').onchange=update;$('station-search').oninput=update;$('live-only').onchange=update;
-  $('station-results').onclick=event=>{const button=event.target.closest('[data-result]');if(!button)return;const row=listed[Number(button.dataset.result)];if(!row)return;const marker=ensureMarker(row);map.setView([row.site.lat,row.site.lon],Math.max(map.getZoom(),15));marker.openPopup();$('station-map').scrollIntoView({behavior:'smooth',block:'center'});};
+  $('station-results').onclick=event=>{const button=event.target.closest('[data-result]');if(!button)return;const row=listed[Number(button.dataset.result)];if(!row)return;const marker=ensureMarker(row);switchResultView('map');drawer(false);map.setView([row.site.lat,row.site.lon],Math.max(map.getZoom(),15));if(markers.zoomToShowLayer)markers.zoomToShowLayer(marker,()=>marker.openPopup());else marker.openPopup();$('station-map').scrollIntoView({behavior:'smooth',block:'center'});};
   $('live-refresh').onclick=refresh;$('live-enabled').onchange=()=>{if(!enabled()){controller?.abort();liveIndex=null;lastFetched=0;}else refresh();timers();update();};
   document.addEventListener('visibilitychange',()=>{timers();if(!document.hidden){update();if(!lastFetched||Date.now()-lastFetched>60000)refresh();}});
   window.addEventListener('departement-change',event=>{if(origin){stopWatch();origin=null;window.rechargeNearbyActive=false;$('leave-nearby').hidden=true;$('near-status').textContent='Vue par département. Localisation arrêtée.';}show(event.detail);});
   window.addEventListener('vue-change',event=>{timers();if(event.detail==='carte'&&map){requestAnimationFrame(fit);if(!lastFetched||Date.now()-lastFetched>60000)refresh();}});
   if($('departement').value)show($('departement').value);
 })();
+
