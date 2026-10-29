@@ -12,6 +12,12 @@
     return '<div aria-label="Itinéraire vers la station"><a target="_blank" rel="noopener noreferrer" style="'+style+'" href="https://www.waze.com/ul?ll='+position+'&amp;navigate=yes" aria-label="'+escape('Y aller avec Waze : '+label)+'">Y aller avec Waze ↗</a><a target="_blank" rel="noopener noreferrer" style="'+style+'" href="https://www.google.com/maps/dir/?api=1&amp;destination='+position+'&amp;travelmode=driving" aria-label="'+escape('Itinéraire Google Maps : '+label)+'">Google Maps ↗</a><br><small>Ouvre votre application ou le site de navigation vers les coordonnées recensées. Vérifiez l’entrée du parking et les conditions d’accès.</small></div>';
   }
 
+
+  function pin(kind){
+    return L.divIcon({className:'site-marker',html:'<span class="station-pin '+kind+'"><svg viewBox="0 0 20 24" aria-hidden="true"><path fill="currentColor" d="M11.5 0 2 13h7l-1 11 10-15h-7z"/></svg></span>',iconSize:[35,40],iconAnchor:[17,38],popupAnchor:[0,-34],tooltipAnchor:[0,-30]});
+  }
+  const normalize=value=>String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  const mapActive=()=>!document.querySelector('[data-view="carte"]').hidden;
   const R=window.IRVERealtime;
   let map,markers,boundary,payload,requested='',revision=0,selectedBounds,sites=[],entries=[];
   let liveIndex=null,lastFetched=0,fetching=false,controller=null,lastError='',pollTimer=null,ageTimer=null;
@@ -40,10 +46,12 @@
       const tooltip='<strong>'+fmt(site.points)+' points de recharge</strong><br>'+escape(summary)+'<br>'+escape(label);
       const times=known?'<br>Horodatages retenus : '+date(c.oldest)+(c.oldest!==c.newest?' à '+date(c.newest):'')+' (heure locale).':'';
       const content=tooltip+'<br>'+escape(site.adresse||'Adresse non renseignée')+'<br>Opérateur(s) : '+escape(site.operateur||'Non renseigné')+'<hr>'+escape(states)+times+(site.stations>1?'<br>'+fmt(site.stations)+' identifiants de station regroupés.':'')+navigation(site,label)+'<br><small>Disponibilité déclarée par les opérateurs ; ne garantit pas une place libre à l’arrivée. Total recensé au 22/10/2026.</small>';
-      marker.setIcon(L.divIcon({className:'site-marker',html:'<span class="site-dot '+kind+'">'+count+'</span>',iconSize:[48,28],iconAnchor:[24,14]}));
+      marker.setIcon(pin(kind));
       marker.setTooltipContent(tooltip);marker.setPopupContent(content);
       const el=marker.getElement();if(el){el.setAttribute('aria-label',label+' : '+summary);el.title=label+' : '+summary;}
-      const visible=!$('live-only').checked||c.available>0;
+      const query=normalize($('station-search').value).trim();
+      const matches=!query||normalize([site.nom,site.adresse,site.operateur].join(' ')).includes(query);
+      const visible=matches&&(!$('live-only').checked||c.available>0);
       if(visible){shown++;if(!markers.hasLayer(marker))markers.addLayer(marker);}else if(markers.hasLayer(marker))markers.removeLayer(marker);
     }
     $('live-available').textContent=fmt(total.available);$('live-busy').textContent=fmt(total.busy);
@@ -53,10 +61,11 @@
     else if(fetching)$('live-status').textContent='Actualisation du flux national…';
     else if(usable)$('live-status').textContent='Flux consulté à '+date(lastFetched)+' · '+fmt(sites.reduce((n,s)=>n+s.points,0)-total.unknown)+' / '+fmt(sites.reduce((n,s)=>n+s.points,0))+' points avec statut récent exploitable. Actualisation chaque minute.';
     else $('live-status').textContent='Aucun flux récent exploitable — statuts inconnus.';
+    $('search-status').textContent=$('station-search').value.trim()?fmt(shown)+' site(s) affiché(s) sur '+fmt(sites.length)+'.':'';
     $('live-filter-status').textContent=$('live-only').checked?fmt(shown)+' sites avec au moins un point disponible confirmé. Les sites sans statut récent sont masqués ; cela ne prouve pas qu’ils sont occupés.':'';
   }
   async function refresh(){
-    if(!requested||!enabled()||document.hidden||fetching)return;
+    if(!requested||!enabled()||document.hidden||fetching||!mapActive())return;
     fetching=true;lastError='';$('live-refresh').disabled=true;updateRealtime();
     controller=new AbortController();const timeout=setTimeout(()=>controller?.abort(),25000);
     try{
@@ -71,10 +80,10 @@
   }
   function timers(){
     clearInterval(pollTimer);clearInterval(ageTimer);
-    if(requested&&enabled()&&!document.hidden){pollTimer=setInterval(refresh,60000);ageTimer=setInterval(updateRealtime,15000);}
+    if(requested&&enabled()&&!document.hidden&&mapActive()){pollTimer=setInterval(refresh,60000);ageTimer=setInterval(updateRealtime,15000);}
   }
   async function show(code){
-    requested=code;const current=++revision;sites=[];entries=[];timers();
+    requested=code;$('station-search').value='';const current=++revision;sites=[];entries=[];timers();
     $('map-section').hidden=!code;if(!code){controller?.abort();return;}
     $('map-title').textContent='Où se situent les stations de recharge ?';$('map-summary').textContent='Chargement des sites de recharge…';$('map-summary').classList.remove('map-error');$('map-status').textContent='';
     for(const id of ['live-available','live-busy','live-out','live-unknown'])$(id).textContent='—';
@@ -89,8 +98,8 @@
       $('map-title').textContent=contour.properties.nom+' : les sites de recharge';
       for(const site of sites){
         const raw=site.nom.length>180?(site.adresse||'Site de recharge partagé'):site.nom,label=raw.length>180?raw.slice(0,177)+'…':raw;
-        const marker=L.marker([site.lat,site.lon],{icon:L.divIcon({className:'site-marker',html:'<span class="site-dot unknown">?/'+fmt(site.points)+'</span>',iconSize:[48,28],iconAnchor:[24,14]}),title:label,keyboard:true})
-          .bindTooltip('Statut inconnu',{direction:'top',offset:[0,-12]}).bindPopup('Chargement des statuts…').addTo(markers);
+        const marker=L.marker([site.lat,site.lon],{icon:pin('unknown'),title:label,keyboard:true})
+          .bindTooltip('Statut inconnu',{direction:'top',offset:[0,-12]}).bindPopup('Chargement des statuts…',{maxWidth:Math.max(160,Math.min(310,map.getSize().x-70)),minWidth:Math.max(160,Math.min(220,map.getSize().x-70)),maxHeight:map.getSize().x<500?350:440,autoPanPadding:[20,20]}).addTo(markers);
         entries.push({site,marker,label});
       }
       $('map-summary').textContent=fmt(sites.length)+' sites cartographiés · '+fmt(sites.reduce((n,s)=>n+s.points,0))+' points de recharge en accès libre recensés';
@@ -99,10 +108,20 @@
       if(!lastFetched||Date.now()-lastFetched>60000)refresh();
     }catch(e){if(current!==revision)return;$('station-map').hidden=true;$('map-summary').classList.add('map-error');$('map-summary').textContent=e.message+' Le comparateur reste utilisable.';}
   }
+  $('station-search').oninput=()=>{
+    updateRealtime();
+    if(!map)return;
+    const query=normalize($('station-search').value).trim();
+    if(!query){if(selectedBounds)map.fitBounds(selectedBounds,{padding:[24,24],maxZoom:12});return;}
+    const visible=entries.filter(e=>markers.hasLayer(e.marker)).map(e=>[e.site.lat,e.site.lon]);
+    if(visible.length)map.fitBounds(L.latLngBounds(visible),{padding:[45,45],maxZoom:14});
+  };
+  window.addEventListener('vue-change',e=>{timers();if(e.detail==='carte'&&map){requestAnimationFrame(()=>{map.invalidateSize();if(selectedBounds)map.fitBounds(selectedBounds,{padding:[24,24],maxZoom:12});});if(!lastFetched||Date.now()-lastFetched>60000)refresh();}});
   $('live-refresh').onclick=refresh;$('live-only').onchange=updateRealtime;
   $('live-enabled').onchange=()=>{if(!enabled()){controller?.abort();liveIndex=null;lastFetched=0;}else refresh();timers();updateRealtime();};
   document.addEventListener('visibilitychange',()=>{timers();if(!document.hidden){updateRealtime();if(!lastFetched||Date.now()-lastFetched>60000)refresh();}});
   window.addEventListener('departement-change',e=>show(e.detail));
   if($('departement').value)show($('departement').value);
 })();
+
 
