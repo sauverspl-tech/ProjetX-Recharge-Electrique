@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict'),F=require('../cm3/filtres.js'),R=require('../cm3/temps-reel.js');
+const site={nom:'Station électrique',adresse:'Aubière',operateur:'Test',points:2,ids:['LOW','FAST'],specs:[[7,1,1,1,1,0],[150,2,0,0,0,1]]};
+const fast=F.filterSite(site,{power:50,plug:2});assert.deepEqual(fast.ids,['FAST']);assert.equal(fast.totalPoints,2);assert.equal(fast.points,1);
+assert.equal(F.filterSite(site,{power:50,price:'free'}),null,'pas de correspondance croisée puissance/gratuit sur deux points différents');
+assert.equal(F.filterSite(site,{power:50,pmr:true}),null);assert.equal(F.filterSite(site,{always:true}).ids[0],'LOW');
+assert.equal(F.filterSite(site,{q:'aubiEre'}).points,2);assert.equal(F.priceLabel(fast),'Payant déclaré');
+const now=Date.now(),index=new Map([['LOW',{time:now,state:'en_service',occupation:'libre'}],['FAST',{time:now,state:'en_service',occupation:'occupe'}]]);
+assert.equal(R.summarize(fast,index,now).available,0,'une disponibilité lente ne rend pas le point rapide disponible');
+assert.equal(F.filterSite({...site,specs:[[null,0,-1,0,0,-1],[null,0,-1,0,0,-1]]},{power:22}),null);
+assert.equal(F.priceLabel({...site,specs:[[null,0,-1]]}),'Prix à vérifier');assert.ok(Math.abs(F.distance({lat:0,lon:0},{lat:0,lon:1})-111.195)<.01);
+console.log('Filtres : critères appliqués au même point, valeurs absentes, recherche et distance OK.');
