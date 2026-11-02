@@ -1,23 +1,43 @@
 {
-  "date": "2026-10-23",
+  "date": "2026-11-02",
   "source": "cm2/dashboard.json",
   "source_sha256": "73eca90726cebc987128d4f3c3a339ac965f17c74f5281311595f76f00ca4b13",
   "fichiers": [
     {
+      "nom": "carte.json",
+      "sha256": "888cf575195672c063e5125cc5b6d032266ae077abe253dbc10b47604c9f7555"
+    },
+    {
       "nom": "index.html",
-      "sha256": "1aec9f4c0a59ce08931f82ac22aa35138d4c42a3a7ca5ff7f4dd9d702b1edab9"
+      "sha256": "fab8327495625d4a5079bc467d147d20b8256a97a6672ebd1e7a439ef7481b14"
     },
     {
       "nom": "donnees.json",
       "sha256": "dff4959c7c2b9432444c64970ccc70a4400e55b83862b0c0ed4ce702c5ace083"
     },
     {
-      "nom": "carte.json",
-      "sha256": "d82733273fa801322a6ea582f18d3ffe2d61d2f74b02a2871a0486cf6798cda0"
+      "nom": "explorer.css",
+      "sha256": "cf3af30566c026f3be4e51ad048aaae697adb300de915e758fa9406889f2372c"
+    },
+    {
+      "nom": "filtres.js",
+      "sha256": "f056a5872f381d2f30532b9dca7b9fe4d6eea028c13c6381779579b422309314"
     },
     {
       "nom": "carte.js",
-      "sha256": "3341db12ec566644ec611ba0c58f4412ddff7230058388fcb0f3792e4f3b0731"
+      "sha256": "fab4fface0fc30ab44dbb1e2688f7c0e02aead104da6ba3597e7807732b7faeb"
+    },
+    {
+      "nom": "README.md",
+      "sha256": "8661847dcaca87f81e7ef20385650158c0ca6c41f57ca6e4d1d395f615198393"
+    },
+    {
+      "nom": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "nom": "comparateur.js",
+      "sha256": "ee870f12ac735fb1a74850c9682e872aab5a6e3adc834e44c228099aa6434b3e"
     },
     {
       "nom": "temps-reel.js",
@@ -25,7 +45,7 @@
     },
     {
       "nom": "publication_site.zip",
-      "sha256": "606cd4ec85c9ba003aa30dcb46074b23de9ebb9d61300b67ba7f99ed52bcf093"
+      "sha256": "e7019ef4b64111400f393c03f95aa628ab07ab6319816b53e09afbd396c9a35f"
     }
   ]
 }
