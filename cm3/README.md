@@ -53,10 +53,3 @@ Règles : ne retenir que les horodatages avec fuseau explicite de moins de 15 mi
 La couverture est partielle : l’absence de statut ne signifie ni occupation ni panne. Le seuil de 15 minutes est un choix prudent du prototype, pas une garantie de fraîcheur d’un opérateur. Un état trop ancien peut encore être exact, mais n’est pas annoncé comme actuel. Le flux complet représente environ 9 Mo non compressés par consultation ; les téléchargements périodiques sont suspendus quand l’onglet est masqué. Aucun historique dynamique n’est publié dans le dépôt.
 
 Tests : `node tests/temps_reel.test.cjs`. Le jeu de tests utilise uniquement des exemples synthétiques pour les règles ; l’écran de production affiche exclusivement le flux officiel.
-
-
-## Refonte de la carte — 2 novembre 2026
-
-Carte et liste synchronisées, regroupement visuel des sites, recherche, favoris locaux, filtres combinés par point : puissance, prise, gratuité déclarée, disponibilité confirmée, accès 24/7, PMR et carte bancaire. Les tarifs sont affichés tels que déclarés ; aucune comparaison numérique de prix n’est inventée. La géolocalisation est demandée uniquement au clic et reste en mémoire. Les critères inconnus ne sont pas considérés comme confirmés. Le comparateur historique reste accessible dans le panneau Analyse.
-
-La publication comprend aussi `filtres.js`, `explorer.css` et `comparateur.js`. Les tests vérifient la combinaison des critères sur un même point et la disponibilité des seuls points retenus.

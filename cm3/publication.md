@@ -28,10 +28,3 @@ Traffic mesure les accès au dépôt, pas les visites de GitHub Pages. Les compt
 Depuis la racine : `python3 scripts/preparer_pages.py`, puis `python3 -m http.server 8767 --bind 127.0.0.1 --directory _site`. Le paquet `cm3/publication_site.zip` contient la même sélection de fichiers pour une publication manuelle.
 
 Le temps réel est obtenu directement depuis le proxy public PAN, qui autorise la lecture depuis le navigateur. Le workflow exécute les tests des règles de disponibilité avant de publier. Aucune clé API, aucun secret et aucun relevé dynamique ne sont déposés sur Pages.
-
-
-## Refonte de la carte — 2 novembre 2026
-
-Carte et liste synchronisées, regroupement visuel des sites, recherche, favoris locaux, filtres combinés par point : puissance, prise, gratuité déclarée, disponibilité confirmée, accès 24/7, PMR et carte bancaire. Les tarifs sont affichés tels que déclarés ; aucune comparaison numérique de prix n’est inventée. La géolocalisation est demandée uniquement au clic et reste en mémoire. Les critères inconnus ne sont pas considérés comme confirmés. Le comparateur historique reste accessible dans le panneau Analyse.
-
-La publication comprend aussi `filtres.js`, `explorer.css` et `comparateur.js`. Les tests vérifient la combinaison des critères sur un même point et la disponibilité des seuls points retenus.

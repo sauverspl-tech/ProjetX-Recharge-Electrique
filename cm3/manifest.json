@@ -5,11 +5,11 @@
   "fichiers": [
     {
       "nom": "carte.json",
-      "sha256": "888cf575195672c063e5125cc5b6d032266ae077abe253dbc10b47604c9f7555"
+      "sha256": "d82733273fa801322a6ea582f18d3ffe2d61d2f74b02a2871a0486cf6798cda0"
     },
     {
       "nom": "index.html",
-      "sha256": "fab8327495625d4a5079bc467d147d20b8256a97a6672ebd1e7a439ef7481b14"
+      "sha256": "c609ecd50787c5ab6d7acccaa9da8d94338597a69ccd9b8b00715e0f20ef4c57"
     },
     {
       "nom": "donnees.json",
@@ -25,7 +25,7 @@
     },
     {
       "nom": "carte.js",
-      "sha256": "fab4fface0fc30ab44dbb1e2688f7c0e02aead104da6ba3597e7807732b7faeb"
+      "sha256": "cb1e58e091d50740ae610345a81e671dc6a58106631e9f3573061279a24ef5a8"
     },
     {
       "nom": "README.md",
@@ -41,11 +41,7 @@
     },
     {
       "nom": "temps-reel.js",
-      "sha256": "f267ab788cd65589b95a9ec766e42ac55e1a14af7b4201bfa3aff3badd5f3eb4"
-    },
-    {
-      "nom": "publication_site.zip",
-      "sha256": "e7019ef4b64111400f393c03f95aa628ab07ab6319816b53e09afbd396c9a35f"
+      "sha256": "8a92ed4ae1fd1b83f011864a6559eb594a08dbfd31b82a8d390e96ce0afe9a03"
     }
   ]
 }
